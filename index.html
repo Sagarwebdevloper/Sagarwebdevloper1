@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Web Portal </title>
+
+	<link rel="stylesheet" type="text/css" href="s.css">
+
+</head>
+
+
+<body background="#00bbf0">
+	
+	<div class="Me"> 
+		<form   method="post" name="google-sheet" >
+
+			<h3><center><font-color="White"> Web Registration</font></center></center></h3>
+			<b>Name</b><input type="text" placeholder="Type your Name*"name="Name"required>
+			<b>Father Name</b><input type="text" placeholder="Type your Father's Name*"name="Father's_Name"required>
+			<b>MotherName</b><input type="text" placeholder="Type your Mother's  Name*"name="Mother's_Name"required>
+			<b> Mobile Number</b><input type="mobile" placeholder="Type your Contect Number*"name="Contect_Number"required>
+			<b>Email</b><input type="email" placeholder="Type your email*"name="Email"required>
+			<b>Dat of Birth</b><input type="date" placeholder="Type your Birth birth*"name="Date_of_birth"required>
+			
+			<b>Address</b><input type="textarea" placeholder="Write your Address here*" name="Address"required>
+
+
+
+			
+
+			<select name="degree*"required>
+				<option value="not">Select an option</option>
+				<option value="10th">10th</option>
+				<option value="12h">12th</option>
+				<option value="BA">BA</option>
+				<option value="B.com">B.com</option>
+				<option value="B.sc">B.sc</option>
+			</select>
+
+			
+
+			<label><b>Gender*</b></label></br>
+
+			Male<input type="radio" name="gender" value="Male" required>
+			Female<input type="radio" name="gender" value="Female"required>
+
+			 
+
+			<button type="submit">submit</button>
+			<button type="reset" class="reset">Reset</button>
+
+		</form>
+
+
+	</div>
+
+
+	<script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwfq316U13_ck0k1LXdOVzFUbneMO1gVDnigVziC5Hqyw9VnJJEbB7bSzuSV0QnJ32QCA/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+
+
+</body>
+</html>

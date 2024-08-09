@@ -1,0 +1,68 @@
+*
+
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.Me
+{
+	width: 100%;
+	height: 150vh;
+	
+	background-size: 200% 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+
+}
+
+form
+{
+	
+	
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	width: 100%;
+	max-width: 600px;
+	border-color: #dbd8e3;
+	border-radius: 7px;
+	backface-visibility: 5px;
+}
+
+form h3
+{
+	font-size: 20px;
+	margin-bottom: 6px;
+	font-color: white;
+}
+
+form input, select, texta
+{
+	border: 1px solid black;
+	margin: 10px 0;
+	 padding: 10px;
+	 outline: none;
+	 background: #EEEEEE;
+	 font-size: 17px;
+}
+
+form button
+{
+	padding: 13px;
+	background: green;
+	color: white;
+	font-size: 17px;
+	border-radius: 7px;
+	border: 0;
+	
+	margin: 8px;
+	cursor: pointer;
+}
+form .reset
+{
+	background: red;
+}
